@@ -121,10 +121,12 @@ document.getElementById('khodamForm').addEventListener('submit', function(e) {
     return;
   }
   
-  const randomIndex = Math.floor(Math.random() * khodam.length);
-  const randomKhodam = khodam[randomIndex];
-  
-  result.textContent = `${name}, Khodam Anda Adalah ${randomKhodam}`;
-  
-  document.getElementById('inputName').value = '';
+  result.textContent = 'mencari khodam....';
+  setTimeout(() => {
+    const randomIndex = Math.floor(Math.random() * khodam.length);
+    const randomKhodam = khodam[randomIndex];
+    
+    result.textContent = `${name}, Khodam Anda Adalah ${randomKhodam}`;
+    document.getElementById('inputName').value = '';
+  }, 1500);
 });
