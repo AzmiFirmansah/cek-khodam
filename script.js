@@ -125,4 +125,6 @@ document.getElementById('khodamForm').addEventListener('submit', function(e) {
   const randomKhodam = khodam[randomIndex];
   
   result.textContent = `${name}, Khodam Anda Adalah ${randomKhodam}`;
+  
+  document.getElementById('inputName').value = '';
 });
